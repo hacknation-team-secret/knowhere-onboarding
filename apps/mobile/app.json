@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Knowhere",
+    "slug": "knowhere",
+    "scheme": "knowhere",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#F6F0E8"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F0E8"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@knowhere/ui": [
+        "packages/ui/src"
+      ],
+      "@knowhere/domain": [
+        "packages/domain/src"
+      ],
+      "@knowhere/contracts": [
+        "packages/contracts/src"
+      ],
+      "@knowhere/config": [
+        "packages/config/src"
+      ]
+    }
+  }
+}
+
