@@ -11,6 +11,7 @@ This repo starts with onboarding and profile creation, plus the shared package b
 - `packages/domain`: product concepts, personas, and onboarding state
 - `packages/contracts`: API contracts for the first backend boundaries
 - `packages/config`: launch city, product phases, and feature flags
+- `docs/PRD.md`: source-of-truth product requirements for coding agents
 - `docs/architecture.md`: service map and implementation notes from the PRD
 
 ## Product focus
