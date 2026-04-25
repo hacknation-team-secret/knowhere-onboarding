@@ -53,13 +53,17 @@ export function TextField({
   value,
   placeholder,
   onChangeText,
-  keyboardType = "default"
+  keyboardType = "default",
+  multiline = false,
+  numberOfLines
 }: {
   label: string;
   value: string;
   placeholder: string;
   onChangeText: (next: string) => void;
-  keyboardType?: "default" | "email-address";
+  keyboardType?: "default" | "email-address" | "url";
+  multiline?: boolean;
+  numberOfLines?: number;
 }) {
   return (
     <View style={styles.fieldGroup}>
@@ -69,8 +73,11 @@ export function TextField({
         placeholder={placeholder}
         onChangeText={onChangeText}
         keyboardType={keyboardType}
-        autoCapitalize={keyboardType === "email-address" ? "none" : "words"}
-        style={styles.input}
+        autoCapitalize={keyboardType === "email-address" || keyboardType === "url" ? "none" : "words"}
+        style={[styles.input, multiline ? styles.inputMultiline : undefined]}
+        multiline={multiline}
+        numberOfLines={numberOfLines}
+        textAlignVertical={multiline ? "top" : "center"}
         placeholderTextColor="#8B6B52"
       />
     </View>
@@ -137,6 +144,9 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     fontSize: 16,
     color: "#181411"
+  },
+  inputMultiline: {
+    minHeight: 132
   }
 });
 

@@ -144,21 +144,31 @@ Cities and local businesses struggle to:
 
 ### 4.1 Passport Onboarding
 
-Knowhere starts by creating a lightweight city Passport for each user. Onboarding should feel visual, fast, and preference-led, not like a form.
+Knowhere starts by creating a lightweight city Passport for each user. Onboarding should feel seamless, expressive, and preference-led, not like a form or multi-step quiz.
 
-User provides:
+Primary prompt:
 
-- User type: visitor, local, student, commuter
-- Time in city: today, weekend, semester, permanent
-- Interests: coffee, bookstores, museums, food, parks, music, shopping, nightlife
-- Mobility preference: walk, bike, transit, mixed
-- Budget: low, medium, flexible
-- Desired vibe: local, iconic, quiet, social, scenic, family-friendly, hidden gem
-- Optional needs: accessibility, dietary preferences, calendar, friends, wallet/spending
+- Describe your travel style
+
+Users can respond by:
+
+- Copying a prewritten Knowhere prompt into the LLM of their choice
+- Pasting in saved places, travel notes, memories, lists, restaurant names, neighborhoods, links, social posts, or random vibes
+- Bringing the generated profile back into Knowhere
+- Linking Instagram and/or TikTok profiles that reflect their travel taste
+
+Lightweight profile fields:
+
+- First name
+- Home city
+- Email
 
 Output:
 
 - Personalized Knowhere Passport profile
+- Generated Passport artifact that becomes the user's source of truth
+- Saved LLM-generated traveler profile
+- Optional social taste signals
 - Initial context chips
 - First recommended Detour
 - Saved preference memory
@@ -213,12 +223,17 @@ You have 90 minutes, the weather is clear, and there are bikes available nearby.
 
 The Passport stores the user's city identity, active plans, perks, and memories.
 
+Passport generation should feel like a meaningful onboarding moment. After the user describes their travel style, Knowhere should generate a Passport artifact that feels collectible and personal, similar to a travel document or memory object rather than a plain settings profile.
+
+When available, the Passport should automatically use the user's Instagram profile photo as the lead image for the artifact. If Instagram is not available, a fallback social avatar can be used until a more direct image source is connected.
+
 The Passport includes:
 
 - Active Detour
 - Offer passes
 - Completed stamps
 - Saved places
+- Cities visited
 - Rewards
 - Tickets or entry passes
 - Optional transit/payment objects
@@ -314,17 +329,22 @@ Do not scale to additional cities until Knowhere proves:
 
 ### 7.1 Passport Onboarding
 
-Knowhere starts by creating a lightweight city Passport for the user. Onboarding should feel visual, fast, and preference-led, not like filling out a form.
+Knowhere starts by creating a lightweight city Passport for the user. Onboarding should feel visual, fast, and narrative-led, not like filling out a form.
 
 MVP scope:
 
-- Required: user type, interests, mobility preference, budget, vibe, starting location
-- Optional: accessibility needs and dietary preferences
-- Deferred: calendar, friends, saved links, social inspiration, wallet/spending
+- Required: one prewritten prompt for external LLM use
+- Required: pasted `KNOWHERE PASSPORT PROFILE` output
+- Optional signals: Instagram profile, TikTok profile
+- Lightweight profile basics: first name, home city, email
+- Deferred: calendar, friends, saved links import, wallet/spending, deep social ingestion, in-app voice capture
 
 Outputs:
 
 - Knowhere Passport profile
+- Generated Passport artifact
+- LLM-generated traveler profile
+- Optional social taste handles
 - Initial context chips
 - First recommended Detour
 - Saved preference memory
@@ -784,7 +804,9 @@ Maya is visiting Boston. She has 90 minutes before dinner, likes coffee and book
 
 ### 9.3 MVP Must-Haves
 
-- Passport onboarding
+- Passport onboarding with one prewritten LLM prompt
+- Paste-back flow for the generated profile
+- Optional Instagram/TikTok profile inputs
 - City Pulse home screen
 - Context chips
 - Generate Detour flow
@@ -1046,4 +1068,3 @@ Avoid creepy phrasing:
 - Congestion management
 - Demand redistribution
 - Civic dashboards
-

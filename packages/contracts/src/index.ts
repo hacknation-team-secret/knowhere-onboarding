@@ -31,8 +31,11 @@ export type CreateProfileRequest = {
   firstName: string;
   homeCity: string;
   email: string;
-  travelFrequency: "weekly" | "monthly" | "occasionally";
-  onboardingAnswers: Record<string, string>;
+  passportProfile: string;
+  socialProfiles: {
+    instagram?: string;
+    tiktok?: string;
+  };
 };
 
 export type NavigationOptionsRequest = {
