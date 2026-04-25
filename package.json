@@ -8,11 +8,17 @@
   ],
   "scripts": {
     "dev:mobile": "npm --workspace @knowhere/mobile run start",
+    "dev:web": "npm --workspace @knowhere/mobile run web",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~4.0.1",
+    "react-dom": "18.3.1",
+    "react-native-web": "~0.19.13"
   }
 }
